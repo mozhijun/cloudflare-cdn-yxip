@@ -1,14 +1,13 @@
 #!/bin/bash
 export LANG=zh_CN.UTF-8
-auth_email="1059224309@qq.com"    #你的CloudFlare注册账户邮箱
-auth_key="bf0dd2e5d682ade001103b60cc25777422c9a"   #你的CloudFlare账户key,位置在域名概述页面点击右下角获取api key。
-zone_name="cxy1024.pp.ua"     #你的主域名
+auth_email="xxx@qq.com"    #你的CloudFlare注册账户邮箱
+auth_key="xxx"   #你的CloudFlare账户key,位置在域名概述页面点击右下角获取api key。
+zone_name="xxx"     #你的主域名
 record_name="cl"    #自动更新的二级域名前缀,例如cloudflare的cdn用cl，gcore的cdn用gcore，后面是数字，程序会自动添加。二级域名需要已经在域名管理网站配置完成，视频教程可以参考：https://www.youtube.com/channel/UCfSvDIQ8D_Zz62oAd5mcDDg
 record_count=6 #二级域名个数，例如配置5个，则域名分别是cl1、cl2、cl3、cl4、cl5.   后面的信息均不需要修改，让他自动运行就好了。
 
 echo
 echo '你的IP地址是'$(curl 4.ipw.cn)',请确认为本机未经过代理的地址'
-echo '小道笔记：https://www.youtube.com/channel/UCfSvDIQ8D_Zz62oAd5mcDDg'
 ./CloudflareST 
 
 record_type="A"     
